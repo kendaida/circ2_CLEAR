@@ -30,9 +30,10 @@ workflow circ2_clear
 
 task circ2
 {
-	String sample
+    input {
+        String sample
 	File Chimeric_junction
-    
+    }
     command
     {
         CIRCexplorer2 parse -b ${sample}.back_spliced_junction.bed -t STAR ${Chimeric_junction} > ${sample}_parse.log
@@ -60,9 +61,10 @@ task circ2
 
 task circ3
 {
-	String sample
+    input {
+        String sample
 	File bam
-    
+    }
     command
     {
         circ_quant -c ${sample}_circularRNA_known.txt \
