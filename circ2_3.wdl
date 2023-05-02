@@ -36,7 +36,7 @@ task circ2
         CIRCexplorer2 annotate -r hg38.txt \
         -g Homo_sapiens_assembly38_noALT_noHLA_noDecoy.fasta \
         -b {sample}.back_spliced_junction.bed} \
-        -o {sample}_circularRNA_known.txt > {sample}_CIRCexplorer2_annotate.log')
+        -o {sample}_circularRNA_known.txt > {sample}_CIRCexplorer2_annotate.log
 
 	}
     
@@ -64,7 +64,7 @@ task circ3
         circ_quant -c {sample}_circularRNA_known.txt \
         -b {bam} \
         -r hg38.txt \
-        -o {sample}_circRNA_quant.txt > {sample}_circRNA_quant.log'
+        -o {sample}_circRNA_quant.txt > {sample}_circRNA_quant.log
 	}
 
     output
