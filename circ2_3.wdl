@@ -25,6 +25,8 @@ workflow circ2_clear
     	input:
           	sample=sample,
             bam=bam
+	    known_txt=ciri2.known_txt
+	    
     }
     output {
         File known_txt = "${sample}_circularRNA_known.txt"
@@ -71,7 +73,7 @@ task circ3
     input {
         String sample
 	File bam
-	File circ2.known_txt
+	File known_txt
     }
     command
     {
