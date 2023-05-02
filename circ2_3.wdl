@@ -2,6 +2,8 @@
 ## Inputs:
 ## 		sample 	- samplename
 
+version 1.2
+
 workflow circ2_clear
 {
 	# input files
