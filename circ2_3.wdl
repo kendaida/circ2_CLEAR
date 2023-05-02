@@ -31,6 +31,7 @@ workflow circ2_clear
         File circ2_log = "${sample}_CIRCexplorer2_annotate.log"
 	File out = "${sample}_circRNA_quant.txt"
         File clear_log = "${sample}_circRNA_quant.log"
+    }
 
 }
 
