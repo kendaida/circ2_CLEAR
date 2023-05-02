@@ -6,11 +6,12 @@ version 1.0
 
 workflow circ2_clear
 {
+    input {
 	# input files
 	File Chimeric_junction
 	File bam
 	String sample
-
+    }
     # identify circRNA by circExplorer2
     call circ2
     {
