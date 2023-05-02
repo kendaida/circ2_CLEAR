@@ -11,7 +11,7 @@ workflow circ2_clear
 	File bam
 	String sample
 
-    # identidy circRNA by circExplorer2
+    # identify circRNA by circExplorer2
     call circ2
     {
     	input:
