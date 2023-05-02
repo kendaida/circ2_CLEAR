@@ -2,7 +2,7 @@
 ## Inputs:
 ## 		sample 	- samplename
 
-version 1.2
+version 1.0
 
 workflow circ2_clear
 {
