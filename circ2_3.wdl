@@ -32,18 +32,18 @@ task circ2
     
     command
     {
-        CIRCexplorer2 parse -b {sample}.back_spliced_junction.bed -t STAR {Chimeric_junction} > {sample}_parse.log
+        CIRCexplorer2 parse -b ${sample}.back_spliced_junction.bed -t STAR ${Chimeric_junction} > ${sample}_parse.log
         CIRCexplorer2 annotate -r hg38.txt \
         -g Homo_sapiens_assembly38_noALT_noHLA_noDecoy.fasta \
-        -b {sample}.back_spliced_junction.bed} \
-        -o {sample}_circularRNA_known.txt > {sample}_CIRCexplorer2_annotate.log
+        -b ${sample}.back_spliced_junction.bed \
+        -o ${sample}_circularRNA_known.txt > ${sample}_CIRCexplorer2_annotate.log
 
 	}
     
     output
     {
-        File known_txt = "{sample}_circularRNA_known.txt"
-        File circ2_log = "{sample}_CIRCexplorer2_annotate.log"
+        File known_txt = "${sample}_circularRNA_known.txt"
+        File circ2_log = "${sample}_CIRCexplorer2_annotate.log"
     }
 
     runtime 
@@ -62,16 +62,16 @@ task circ3
     
     command
     {
-        circ_quant -c {sample}_circularRNA_known.txt \
-        -b {bam} \
+        circ_quant -c ${sample}_circularRNA_known.txt \
+        -b ${bam} \
         -r hg38.txt \
-        -o {sample}_circRNA_quant.txt > {sample}_circRNA_quant.log
+        -o ${sample}_circRNA_quant.txt > ${sample}_circRNA_quant.log
 	}
 
     output
     {
-        File out = "{sample}_circRNA_quant.txt"
-        File circ2_log = "{sample}_circRNA_quant.log"
+        File out = "${sample}_circRNA_quant.txt"
+        File circ2_log = "${sample}_circRNA_quant.log"
     }
 
     runtime 
