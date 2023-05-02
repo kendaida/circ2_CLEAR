@@ -27,7 +27,8 @@ workflow circ2_clear
 
 task circ2
 {
-	File sample
+	String sample
+	File Chimeric_junction
     
     command
     {
@@ -56,7 +57,8 @@ task circ2
 
 task circ3
 {
-	File sample
+	String sample
+	File bam
     
     command
     {
