@@ -71,7 +71,7 @@ task circ3
     input {
         String sample
 	File bam
-	File known_txt
+	File circ2.known_txt
     }
     command
     {
