@@ -1,5 +1,5 @@
 version: 1.2
- workflows:
- name: example_1
- subclass: WDL
- primaryDescriptorPath:/kendaida/circ2_CLEAR/circ2_3.wdl
+workflows:
+name: circ2_3
+subclass: WDL
+primaryDescriptorPath:/kendaida/circ2_CLEAR/circ2_3.wdl
