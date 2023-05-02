@@ -24,7 +24,7 @@ workflow circ2_clear
     {
     	input:
           	sample=sample,
-            bam=bam
+            bam=bam,
 	    known_txt=circ2.known_txt
 	    
     }
