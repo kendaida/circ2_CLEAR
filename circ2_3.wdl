@@ -30,7 +30,7 @@ workflow circ2_clear
         File known_txt = "${sample}_circularRNA_known.txt"
         File circ2_log = "${sample}_CIRCexplorer2_annotate.log"
 	File out = "${sample}_circRNA_quant.txt"
-        File circ2_log = "${sample}_circRNA_quant.log"
+        File clear_log = "${sample}_circRNA_quant.log"
 
 }
 
