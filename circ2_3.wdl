@@ -71,10 +71,11 @@ task circ3
     input {
         String sample
 	File bam
+	File known_txt
     }
     command
     {
-        circ_quant -c ${sample}_circularRNA_known.txt \
+        circ_quant -c ${known_txt} \
         -b ${bam} \
         -r hg38.txt \
         -o ${sample}_circRNA_quant.txt > ${sample}_circRNA_quant.log
