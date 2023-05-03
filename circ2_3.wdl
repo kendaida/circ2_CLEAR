@@ -10,6 +10,7 @@ workflow circ2_clear
 	# input files
 	File Chimeric_junction
 	File bam
+	File bai
 	File hg38genepred
 	File hg38fasta
 	File hg38fastafai
