@@ -10,10 +10,8 @@ workflow circ2_clear
 	# input files
 	File Chimeric_junction
 	File bam
-	File bai
 	File hg38genepred
 	File hg38fasta
-	File hg38fastafai
 	String sample
     }
     # identify circRNA by circExplorer2
@@ -23,8 +21,7 @@ workflow circ2_clear
 		Chimeric_junction=Chimeric_junction,
 		sample=sample,
 		hg38genepred=hg38genepred,
-		hg38fasta=hg38fasta,
-		hg38fastafai=hg38fastafai
+		hg38fasta=hg38fasta
 		
     }
     
@@ -33,7 +30,6 @@ workflow circ2_clear
     	input:
           	sample=sample,
             bam=bam,
-	    bai=bai,
 	    known_txt=circ2.known_txt,
 	    hg38genepred=hg38genepred
 	    
@@ -54,7 +50,6 @@ task circ2
 	File Chimeric_junction
 	File hg38genepred
 	File hg38fasta
-	File hg38fastafai
     }
     command
     {
@@ -86,7 +81,6 @@ task circ3
     input {
         String sample
 	File bam
-	File bai
 	File known_txt
 	File hg38genepred
     }
