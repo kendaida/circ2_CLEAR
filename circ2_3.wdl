@@ -23,7 +23,9 @@ workflow circ2_clear
 		Chimeric_junction=Chimeric_junction,
 		sample=sample,
 		hg38genepred=hg38genepred,
-		hg38fasta=hg38fasta
+		hg38fasta=hg38fasta,
+		hg38fastafai=hg38fastafai
+		
     }
     
     call circ3
@@ -31,6 +33,7 @@ workflow circ2_clear
     	input:
           	sample=sample,
             bam=bam,
+	    bai=bai,
 	    known_txt=circ2.known_txt,
 	    hg38genepred=hg38genepred
 	    
