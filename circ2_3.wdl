@@ -12,6 +12,7 @@ workflow circ2_clear
 	File bam
 	File hg38genepred
 	File hg38fasta
+	File hg38fastafai
 	String sample
     }
     # identify circRNA by circExplorer2
