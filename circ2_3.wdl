@@ -54,6 +54,7 @@ task circ2
 	File Chimeric_junction
 	File hg38genepred
 	File hg38fasta
+	File hg38fastafai
     }
     command
     {
@@ -85,6 +86,7 @@ task circ3
     input {
         String sample
 	File bam
+	File bai
 	File known_txt
 	File hg38genepred
     }
