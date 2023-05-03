@@ -10,6 +10,7 @@ workflow circ2_clear
 	# input files
 	File Chimeric_junction
 	File bam
+	File hg38genepred
 	String sample
     }
     # identify circRNA by circExplorer2
@@ -18,6 +19,7 @@ workflow circ2_clear
     	input:
 		Chimeric_junction=Chimeric_junction,
 		sample=sample
+		hg38genepred=hg38genepred
     }
     
     call circ3
@@ -42,11 +44,12 @@ task circ2
     input {
         String sample
 	File Chimeric_junction
+	File hg38genepred
     }
     command
     {
         CIRCexplorer2 parse -b ${sample}.back_spliced_junction.bed -t STAR ${Chimeric_junction} > ${sample}_parse.log
-        CIRCexplorer2 annotate -r hg38.txt \
+        CIRCexplorer2 annotate -r ${hg38genepred} \
         -g Homo_sapiens_assembly38_noALT_noHLA_noDecoy.fasta \
         -b ${sample}.back_spliced_junction.bed \
         -o ${sample}_circularRNA_known.txt > ${sample}_CIRCexplorer2_annotate.log
