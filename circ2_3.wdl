@@ -10,6 +10,7 @@ workflow circ2_clear
 	# input files
 	File Chimeric_junction
 	File bam
+	File bambai
 	File hg38genepred
 	File hg38fasta
 	File hg38fastaindex
@@ -32,6 +33,7 @@ workflow circ2_clear
     	input:
 			sample=sample,
 			bam=bam,
+			bambai=bambai,
 			known_txt=circ2.known_txt,
 			hg38genepred=hg38genepred
 	    
@@ -84,6 +86,7 @@ task circ3
     input {
 	String sample
 	File bam
+	File bambai
 	File known_txt
 	File hg38genepred
     }
@@ -105,8 +108,8 @@ task circ3
     runtime 
     {
         docker: "nciccbr/ccbr_clear"
-        memory: "60G"
-        cpu: "4"
+        memory: "120G"
+        cpu: "8"
         disk: "local-disk 2000 HDD"
   	}
 }
