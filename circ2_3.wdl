@@ -56,8 +56,8 @@ task circ2
     {
         samtools faidx ${hg38fasta}
 	CIRCexplorer2 parse -b ${sample}.back_spliced_junction.bed -t STAR ${Chimeric_junction} > ${sample}_parse.log
-        CIRCexplorer2 annotate -r ${hg38genepred} \
-        -g ${hg38fasta} \
+	CIRCexplorer2 annotate -r ${hg38genepred} \
+	-g ${hg38fasta} \
         -b ${sample}.back_spliced_junction.bed \
         -o ${sample}_circularRNA_known.txt > ${sample}_CIRCexplorer2_annotate.log
 	}
