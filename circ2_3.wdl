@@ -83,7 +83,7 @@ task circ2
 		docker: "bwhbioinformaticshub/circexplorer2"
 		memory: "60G"
 		cpu: "4"
-		disk: "local-disk 2000 HDD"
+		disks: "local-disk 200 HDD"
   	}
 }
 
