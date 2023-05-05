@@ -118,6 +118,6 @@ task circ3
         docker: "nciccbr/ccbr_clear"
         memory: CLEAR_vm_memory
         cpu: 8
-        disk: "local-disk " + CLEAR_vm_disk_size_gb + " HDD"
+        disks: "local-disk " + CLEAR_vm_disk_size_gb + " HDD"
   	}
 }
