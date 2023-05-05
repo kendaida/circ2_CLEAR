@@ -108,7 +108,7 @@ task circ3
     runtime 
     {
         docker: "nciccbr/ccbr_clear"
-        memory: "120G"
+        memory: "200G"
         cpu: "8"
         disk: "local-disk 2000 HDD"
   	}
