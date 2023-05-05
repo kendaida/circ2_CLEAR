@@ -51,6 +51,7 @@ task circ2
 	File hg38genepred
 	File hg38fasta
     }
+    
     command
     {
 	CIRCexplorer2 parse -b ${sample}.back_spliced_junction.bed -t STAR ${Chimeric_junction} > ${sample}_parse.log
@@ -83,6 +84,7 @@ task circ3
 	File known_txt
 	File hg38genepred
     }
+    
     command
     {
         circ_quant -c ${known_txt} \
