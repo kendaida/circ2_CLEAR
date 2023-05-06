@@ -17,6 +17,7 @@ workflow circ2_clear
 	String sample
 	Int CLEAR_vm_disk_size_gb
 	String CLEAR_vm_memory
+	Int CLEAR_vm_cpu_num
 	
     }
     # identify circRNA by circExplorer2
@@ -40,7 +41,8 @@ workflow circ2_clear
 			known_txt=circ2.known_txt,
 			hg38genepred=hg38genepred,
 			CLEAR_vm_disk_size_gb=CLEAR_vm_disk_size_gb,
-			CLEAR_vm_memory=CLEAR_vm_memory
+			CLEAR_vm_memory=CLEAR_vm_memory,
+			CLEAR_vm_cpu_num=CLEAR_vm_cpu_num
 			
 	    
     }
@@ -97,6 +99,7 @@ task circ3
 	File hg38genepred
 	Int CLEAR_vm_disk_size_gb
 	String CLEAR_vm_memory
+	Int CLEAR_vm_cpu_num
     }
     
     command
@@ -117,7 +120,7 @@ task circ3
     {
         docker: "nciccbr/ccbr_clear"
         memory: CLEAR_vm_memory
-        cpu: 8
+        cpu: CLEAR_vm_cpu_num
         disks: "local-disk " + CLEAR_vm_disk_size_gb + " HDD"
   	}
 }
