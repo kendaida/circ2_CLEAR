@@ -1,4 +1,4 @@
 version: 1.2
 workflows:
  - subclass: WDL
-   primaryDescriptorPath: circ2_3.wdl
+   primaryDescriptorPath: /circ2_3.wdl
